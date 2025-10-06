@@ -1,0 +1,89 @@
+/* Estilos para centrar el contenido en la página */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    padding: 2rem; /* Separación de los bordes de la ventana */
+}
+
+/* Contenedor que simula ser el marco exterior */
+.form-container {
+    background-color: #fff;
+    padding: 1rem; /* Espacio entre el marco y el formulario interior */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+}
+
+/* El formulario en sí, que tiene su propio borde */
+.form-frame {
+    border: 1px solid #dee2e6;
+    padding: 2rem;
+    border-radius: 0.25rem;
+}
+
+.form-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+/* Estilo para la sección de tarjetas aceptadas */
+.card-options {
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.card-options input[type="radio"] {
+    display: none;
+}
+
+.card-options .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Ancho ajustado para los logos */
+    height: 38px; /* Altura fija */
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid transparent; /* Borde transparente por defecto */
+    margin-bottom: 0;
+}
+
+.card-options .card-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+}
+
+.card-options input[type="radio"]:checked + .card-icon {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, .25);
+}
+
+/* Contenedor de los botones de acción */
+.form-actions {
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    /* Quitamos el borde superior ya que ahora todo el formulario está enmarcado */
+}
